@@ -4,80 +4,242 @@
     <title>Portfolio Site</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' href='style.css'>
+    <link rel='stylesheet' type='text/css' href='/css/style.css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" defer></script>
-    <script src="/js/index.js" defer></script>
+
+
   </head>
 
   <body>
-      <nav class = "navbar navbar-expand-lg navbar-light">
-        <ul class = "navbar-nav mr-auto">
-          <li class = "nav-item">
-            <a class = "nav-link active" href = "#">Home</a>
-          </li>
-          <li class = "nav-item">
-              <a class = "nav-link active" href = "#">About</a>
-            </li>
-          <li class = "nav-item">
-              <a class = "nav-link active" href = "#">Work</a>
-          </li>
-          <li class = "nav-item">
-              <a class = "nav-link active" href = "#">Contact</a>
-          </li>
-        </ul>
-        <ul class = "navbar-nav">
-          <li class = "nav-item">
-              <i class="fa fa-linkedin nav-link"></i>
-          </li>
-          <li class = "nav-item">
-              <i class="fa fa-github nav-link"></i>
-          </li>
-        </ul>
-        </div>
-      </nav>
-
-      <section id = "header">
+      <section id = "header" name = "top">
+          <nav class = "navigation-wrapper">
+              <ul class = "navigation">
+                <li>
+                  <a class = "nav-link active" href = "#">Home</a>
+                </li>
+                <li>
+                    <a class = "nav-link active" id = "about-link" href = "#">About</a>
+                  </li>
+                <li>
+                    <a class = "nav-link active" href = "#">Work</a>
+                </li>
+                <li>
+                    <a class = "nav-link active" href = "#">Contact</a>
+                </li>
+              </ul>
+              <ul class = "navigation">
+                <li>
+                    <i class="fa fa-linkedin nav-link"></i>
+                </li>
+                <li>
+                    <i class="fa fa-github nav-link"></i>
+                </li>
+              </ul>
+          </nav>
         <div id = "header-text">
         <h1>David Ko</h1>
         <h2>Fullstack Web Developer</h2>
         </div>
       </section>
 
-      <section id = "about">
-        <div id = "about-text">
-        <h2>About</h2>
-        <p>I am a fullstack web developer</p>
-        </div>
-        <div id = "picture">
-          <img src = "dko.jpeg" class = "center"/>
-        </div>
-        <div id = "skills">
+      <div class="vNav">
+          <ul class="vNav">
+              <li>
+                  <a class ="vNavNode current" href="#">
+                  </a>
+              </li>
+               <li>
+                   <a class ="vNavNode" href="#about">
+                   </a>
+               </li>
+               <!-- <li>
+                   <a class ="vNavNode" href="#background">
+                   </a>
+               </li> -->
+               <li>
+                   <a class ="vNavNode" href="#work">
+                   </a>
+               </li>
+               <li>
+                   <a class ="vNavNode" href="#contact">
+                   </a>
+               </li>
+        </ul>
+       </div>
+
+      <section id = "about" name = "about">
+        <div class = "container content-lg">
           <div class = "row">
-            <div class = "col-6">
-              <h2>Front-end</h2>
-              <div class = "row">
-                <div class = "col-4">
-                    <img src = "html5.png" id = "htmlabouticon"/>
-                </div>
-                <div class = "col-4">
-                    <img src = "css_icon.png" id = "abouticon"/>
-                </div>
-                <div class = "col-4">
-                    <img src = "reactjsicon.png" id = "abouticon"/>
-                </div>
-              </div>
-              <div class = "row">
-                <div class = "col-4">
-                    <img src = "icon-redux.png" id = "abouticon"/>
-                </div>
+            <div class = "col-sm-3 animation-element slide-left">
+              <div id = "about-text">
+                  <h2>About</h2>
+                  <button id = "resume">Resume <i class="fa fa-angle-right" aria-hidden="true"></i></button>
               </div>
             </div>
-            <div class = "col-6">
-              <h2>Back-end</h2>
-            </div>
+            <div class = "col-sm-9 animation-element slide-left">
+              <div>
+                <p>Hello! My name is David Ko, and I am currently a teaching fellow at Fullstack Academy, after having graduated from the program in October 2017. I am passionate about fullstack web development.</p>
+              </div>
+              <div class = "progress-box">
+                <h5>Javascript &nbsp; React &nbsp; Redux &nbsp; Node &nbsp; Express &nbsp; Sequelize &nbsp; PostgresSQL &nbsp; Git</h5>
+                <div class = "progress"></div>
+                  <div class = "progress-bar proficient"></div>
+              </div>
+              <div class = "progress-box">
+                  <h5>CSS &nbsp; D3.js &nbsp; Jquery &nbsp; Oauth &nbsp; GraphQL &nbsp; React-Native</h5>
+                  <div class = "progress"></div>
+                    <div class = "progress-bar knowledgeable"></div>
+                </div>
+              <div class = "progress-box">
+                  <h5>Python &nbsp; &nbsp; Pandas &nbsp; Numpy &nbsp; Electron &nbsp; Mocha &nbsp; Chai</h5>
+                  <div class = "progress"></div>
+                    <div class = "progress-bar some-exp"></div>
+              </div>
+           </div>
           </div>
         </div>
       </section>
+
+      <!-- <section id = "background" name = "background">
+          <div class = "row">
+              <div class = "col-12">
+                  <div id = "skills">
+                    </div>
+              </div>
+          </div>
+      </section> -->
+
+      <section id = "work" name = "work">
+        <div class = "container content-lg">
+          <div class = "row">
+            <div class = "col-sm-3 animation-element slide-left">
+                <div id = "work-text">
+                    <h2>Projects</h2>
+                </div>
+            </div>
+
+            <div class = "col-sm-9 animation-element slide-left">
+              <div class = "row">
+
+            <div class = "col-4 work">
+              <div id = "outer-box-jads" class = "outer-work">
+                <article class = "work-list" data-category = "Jads-Shopper, React, Redux, Sequelize, Postgres, Oauth, Express.js, Jasmine, CSS" id = "jads-shopper">
+                  <div class = "work-text">
+                    <h6>Jads-Shopper</h6>
+                    <div class = "line"></div>
+                    <p>An e-commerce web application</p>
+                  </div>
+                  <div id = "overlay-jads"></div>
+              </article>
+            </div>
+          </div>
+
+            <div class = "col-4 work">
+              <div id = "outer-box-hot" class = "outer-work">
+              <article class = "work-list" data-category = "Hot-Spot, React, Redux, D3.js, CSS" id = "hot-spot">
+                <div class = "work-text">
+                  <h6>Hot-Spot</h6>
+                  <div class = "line"></div>
+                  <p>User click and scroll behavior visualizer</p>
+                </div>
+                <div id = "overlay-hot"></div>
+              </article>
+              </div>
+            </div>
+
+              <div class = "col-4 work">
+                <div id = "outer-box-synq" class = "outer-work">
+                <article class = "work-list" data-category = "SynQ, React, Redux, React-DND, CSS, Jasmine, Sequelize, Electron.js, Postgres, D3.js" id = "synq">
+                  <div class = "work-text">
+                    <h6>SynQ</h6>
+                    <div class = "line"></div>
+                    <p>Sequelize script generator/query visualizer</p>
+                  </div>
+                  <div id = "overlay-synq"></div>
+                </article>
+                </div>
+              </div>
+          </div>
+
+
+
+          <div class = "row">
+
+            <div class = "col-4 work">
+              <div id = "outer-box-yarn" class = "outer-work">
+                <article class = "work-list" data-category = "Yarn, React, Redux, React-DND, CSS, Jasmine, Sequelize, Postgres, D3.js" id = "yarn">
+                  <div class = "work-text yarn">
+                    <h6>Yarn</h6>
+                    <p>Blogging-site</p>
+                  </div>
+                  <div id = "overlay-yarn"></div>
+                </article>
+              </div>
+            </div>
+
+            <div class = "col-4 work">
+              <div id = "outer-box-charts" class = "outer-work">
+                <article class = "work-list" data-category = "Charts, CSS, HTML, J-Query, D3.js" id = "charts">
+                  <div class = "work-text">
+                    <h6>Charts</h6>
+                    <p>D3 charts of Medicare and baseball data</p>
+                  </div>
+                  <div id = "overlay-charts"></div>
+                </article>
+              </div>
+            </div>
+
+            <div class = "col-4 work">
+              <div id = "outer-box-deploy" class = "outer-work">
+                <article class = "work-list" data-category = "Deploy, Express.js, Postgres, Node.js, HTML, CSS, Oauth" id = "deploy">
+                <div class = "work-text deploy">
+                  <h6>Deploy</h6>
+                  <p>Static-site server</p>
+                </div>
+                <div id = "overlay-deploy"></div>
+              </article>
+            </div>
+        </div>
+      </div>
+
+      </div>
+
+      </div>
+
+      </div>
+
+      </section>
+
+      <section id = "contact" name = "contact">
+        <div class = "inner">
+              <ul class = "icons">
+                <li>
+                  <a href = #> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href = #><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href = #><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                <li>
+                  <a href = #><i class="fa fa-twitter" aria-hidden="true"></a></i>
+                </li>
+              </ul>
+        </div>
+          </div>
+        </div>
+      </section>
+
+      <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <script src ="/js/index.js"></script>
+      <script src ="/js/bubbles.js"></script>
+      <script src ="/js/jq.js"></script>
   </body>
 </html>
