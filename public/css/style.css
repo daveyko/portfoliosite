@@ -39,12 +39,24 @@ ul{
 }
 
 #header {
-  height: 100vh;
+  -moz-animation: bg 60s linear infinite;
+  -webkit-animation: bg 60s linear infinite;
+  -ms-animation: bg 60s linear infinite;
+  animation: bg 60s linear infinite;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
   width: 100vw;
+  background: #348cb2 url("../images/background.jpg") bottom left;
+  background-repeat: repeat-x;
+  height: 100vh;
+  opacity: 1;
   position: relative;
-  background-image: url('/images/background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
@@ -67,19 +79,19 @@ ul{
   text-indent: -9999px;
   border-radius: 50%;
   border: 2px solid;
-  border-color: white;
+  border-color: skyblue;
   text-decoration: none;
 }
 
 .vNav a.vNavNode.current{
-  background-color: white;
+  background-color: skyblue;
 }
 
 #about{
   padding-top: 80px;
   height: 100vh;
   width: 100vw;
-  background-color: #C2C1BD;
+  background-color: white;
 }
 
 .animation-element{
@@ -150,7 +162,7 @@ ul{
 
 #work{
   width: 100vw;
-  background-color: #B2AE9A;
+  background-color: whitesmoke;
 }
 
 #header #header-text{
@@ -212,16 +224,19 @@ img#htmlabouticon{
   font-size:5.0em;
 }
 
-#work #work-text{
+#work-text{
  text-align: center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
 }
 
-
-
-#about #about-text{
-  padding-left:50px;
-}
-
+  #about-text{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
 
 .work-text{
   text-align: center;
@@ -271,7 +286,7 @@ ul.ui-autocomplete li:hover {
 }
 
 #jads-shopper{
-  background-image: url('/images/jads-shopper.png');
+  background-image: url('../images/jads-shopper.png');
   background-size: cover;
   height: 35vh;
 }
@@ -301,11 +316,13 @@ ul.ui-autocomplete li:hover {
   z-index:9999;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .work-list{
   display: flex;
+  flex-direction: column;
+
 }
 
 .work-text{
@@ -334,25 +351,77 @@ ul.ui-autocomplete li:hover {
   color: white;
   z-index: 99999;
   text-align: center;
+  font-size: 21px;
 }
 
 
-#hot-spot{
-  background-image: url('/images/hot-spot-stack.png');
+/* #hot-spot{
+  background-image: url('../images/hot-spot-stack.png');
   background-size: cover;
   height: 35vh;
+} */
+
+.image-wrapper:hover .overlay{
+  opacity: 0;
+}
+.image-wrapper{
+  position: relative;
+  margin: -25px -25px 25px -25px;
+}
+
+.overlay{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: #B0B0B0;
+}
+
+.project-image{
+  max-width: 100%;
+  height: 250px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 #outer-box-hot {
   position: relative;
+  border-radius: 10px;
+  background-color: #fffacd;
+  padding: 25px 25px 0px 25px;
 }
+
+.project-name {
+  border-bottom: solid 2px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.work-link{
+  margin-bottom: 15px;
+}
+
+.learn-more{
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.learn-more-words{
+  display: inline-block;
+  margin-left: 15px;
+}
+
 
 #outer-box-hot:hover #overlay-hot{
   opacity: 0;
 }
 
 #outer-box-hot:hover .work-text{
-  color: black;
+  display: none;
 }
 
 #overlay-hot{
@@ -363,18 +432,14 @@ ul.ui-autocomplete li:hover {
   z-index:9999;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.6;
 }
-
-#synq{
-  background-image: url("/images/synqTables.png");
-  background-size: cover;
-  height: 35vh;
-}
-
 
 #outer-box-synq {
   position: relative;
+  border-radius: 10px;
+  background-color: #fffacd;
+  padding: 25px 25px 0px 25px;
 }
 
 #outer-box-synq:hover #overlay-synq{
@@ -382,7 +447,7 @@ ul.ui-autocomplete li:hover {
 }
 
 #outer-box-synq:hover .work-text{
-  color: black;
+  display: none;
 }
 
 #overlay-synq{
@@ -393,24 +458,14 @@ ul.ui-autocomplete li:hover {
   z-index:9999;
   top: 0;
   left: 0;
-  opacity: 0.8;
-}
-
-#yarn{
-  height: 40vh;
-  position: relative;
-}
-#yarn::after{
-  content: "\f040";
-  font-family: FontAwesome;
-  font-size: 100px;
-  position: absolute;
-  left: 25%;
-  top:25%
+  opacity: 0.6;
 }
 
 #outer-box-yarn {
   position: relative;
+  border-radius: 10px;
+  background-color: #fffacd;
+  padding: 25px 25px 0px 25px;
 }
 
 #outer-box-yarn:hover #overlay-yarn{
@@ -418,18 +473,18 @@ ul.ui-autocomplete li:hover {
 }
 
 #outer-box-yarn:hover .work-text{
-  color: black;
+  display: none;
 }
 
 #overlay-yarn{
   position: absolute;
   height: 100%;
   width:100%;
-  background-color: #28726E;
+  background-color: #5D5851;
   z-index:9999;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .work-text.yarn{
@@ -438,17 +493,8 @@ ul.ui-autocomplete li:hover {
 
 
 #charts{
-  height: 40vh;
+  height: 35vh;
   position: relative;
-}
-
-#charts::after{
-  content: "\f080";
-  font-family: FontAwesome;
-  font-size: 100px;
-  position: absolute;
-  left: 35%;
-  top:25%;
 }
 
 #outer-box-charts {
@@ -460,37 +506,26 @@ ul.ui-autocomplete li:hover {
 }
 
 #outer-box-charts:hover .work-text{
-  color: black;
+  display: none;
 }
 
 #overlay-charts{
   position: absolute;
   height: 100%;
   width:100%;
-  background-color: #5E2D79;
+  background-color: #5D5851;
   z-index:9999;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
-
-#deploy{
-  height: 40vh;
-  position: relative;
-}
-
-#deploy::after{
-  content: "\f233";
-  font-family: FontAwesome;
-  font-size: 100px;
-  position: absolute;
-  left: 35%;
-  top:25%;
-}
 
 #outer-box-deploy {
   position: relative;
+  border-radius: 10px;
+  background-color: #fffacd;
+  padding: 25px 25px 0px 25px;
 }
 
 #outer-box-deploy:hover #overlay-deploy{
@@ -498,18 +533,18 @@ ul.ui-autocomplete li:hover {
 }
 
 #outer-box-deploy:hover .work-text{
-  color: black;
+  display: none;
 }
 
 #overlay-deploy{
   position: absolute;
   height: 100%;
   width:100%;
-  background-color: #CD3333;
+  background-color: #5D5851;
   z-index:9999;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .work-text.deploy{
@@ -531,12 +566,15 @@ hr{
 button#resume{
   background-color: transparent;
   border: 2px solid black;
+  padding: 5px;
+  width: 150px;
+  margin: 10px;
 }
 
 #contact{
   width: 100vw;
   height: 20vh;
-  background-color: #C6C1A8;
+  background-color: white;
 }
 
 #contact .inner{
