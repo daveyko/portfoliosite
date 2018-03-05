@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='public/css/style.css' media= "all">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
 
   </head>
@@ -21,13 +21,13 @@
                 <h2 className = "title">Fullstack Web Developer</h2>
                   <ul class = "header-links">
                     <li>
-                      <a href = "https://www.linkedin.com/in/david-park-ko/"><i class="fa fa-linkedin circular-border" aria-hidden="true"></i></a>
+                      <a target = "_blank" href = "https://www.linkedin.com/in/david-park-ko/"><i class="fab fa-linkedin circular-border" aria-hidden="true"></i></a>
                     </li>
                     <li>
-                        <a href = "https://github.com/daveyko"><i class="fa fa-github circular-border" aria-hidden="true"></i></a>
+                        <a target = "_blank" href = "https://github.com/daveyko"><i class="fab fa-github circular-border" aria-hidden="true"></i></a>
                       </li>
                     <li>
-                        <a href = "mailto:dk577@cornell.edu"><i class="fa fa-envelope circular-border" aria-hidden="true"></i></a>
+                        <a target = "_blank" href = "mailto:dk577@cornell.edu"><i class="fa fa-envelope circular-border" aria-hidden="true"></i></a>
                       </li>
                   </ul>
             </div>
@@ -56,121 +56,110 @@
        </div>
 
       <section id = "about" name = "about">
-        <div class = "container content-lg">
-          <div class = "row">
+        <div class = "flex-wrapper">
 
-            <div class = "col-sm-3 animation-element slide-left">
-              <div id = "about-text">
+              <div class = "flex-text animation-element slide-left">
                   <h2>About</h2>
-                  <a href = "public/resume/resume_david_ko.pdf"><button id = "resume">Resume <i class="fa fa-angle-right" aria-hidden="true"></i></button></a>
+                  <a target = "_blank" class = "text-link" href = "public/resume/resume_david_ko.pdf">
+                    <span class = "text-link-text">Resume </span>
+                    <i class="fa fa-angle-right text-link-icon" aria-hidden="true"></i>
+                  </a>
               </div>
-            </div>
 
-            <div class = "col-sm-9 animation-element slide-left">
+
+            <div class = "flex-content-skills animation-element slide-left">
               <div>
                 <p>Hello! My name is David Ko, and I am currently a software engineer at Paintzen.</p>
               </div>
               <div class = "progress-box">
-                <p class = "skills">Javascript &nbsp; React &nbsp; Redux &nbsp; Node &nbsp; Express &nbsp; Sequelize &nbsp; SQL &nbsp; Git &nbsp; HTML &nbsp; CSS &nbsp; <span class = "level">Proficient</span></p>
-                <div class = "progress"></div>
+                <h5 class = "skills-header">Proficient</h5>
+                <p class = "skills">React/Redux &nbsp; Express &nbsp; SQL/Postgres &nbsp; D3 &nbsp; Git &nbsp; HTML &nbsp; CSS &nbsp; <span class = "level">Proficient</span></p>
                   <div class = "progress-bar proficient"></div>
               </div>
               <div class = "progress-box">
-                  <p class = "skills">Angular  &nbsp; MongoDB &nbsp; Mocha  &nbsp; Chai &nbsp; Enzyme &nbsp; Oauth <span class = "level">Knowledgable</span> </p>
-                  <div class = "progress"></div>
+                  <h5 class = "skills-header">Knowledgeable</h5>
+                  <p class = "skills">Angular  &nbsp; MongoDB/RethinkDB &nbsp; Mocha  &nbsp; Chai &nbsp; Enzyme &nbsp;<span class = "level">Knowledgable</span> </p>
                   <div class = "progress-bar knowledgeable"></div>
-                  <div class = "progress-bar overlay"></div>
                 </div>
               <div class = "progress-box">
-                  <p class = "skills">Python &nbsp; Pandas &nbsp; Numpy &nbsp; Electron <span class = "level">Some Experience</span> </p>
-                  <div class = "progress"></div>
+                  <h5 class = "skills-header">Some Experience</h5>
+                  <p class = "skills">GraphQL &nbsp; Docker &nbsp; Pandas &nbsp; Numpy &nbsp;<span class = "level">Some Experience</span> </p>
                   <div class = "progress-bar some-exp"></div>
-                  <div class = "progress-bar overlay"></div>
               </div>
            </div>
           </div>
-        </div>
       </section>
 
 
       <section id = "work" name = "work">
-        <div class = "container content-lg">
 
-          <div class = "row">
+        <div class = "flex-wrapper">
 
-            <div class = "col-3 animation-element slide-left">
-                <div id = "work-text">
-                    <h2>Projects</h2>
-                    <a href = "https://github.com/daveyko">
-                    <button id = "resume">Github  <i class="fa fa-angle-right" aria-hidden="true"></i></button></a>
-                </div>
+            <div class = "flex-text animation-element slide-left">
+                <h2>Projects</h2>
+                <a target = "_blank" class = "text-link" href = "https://github.com/daveyko">
+                  <span class = "text-link-text">Github </span>
+                  <i class="fa fa-angle-right text-link-icon" aria-hidden="true"></i>
+                </a>
             </div>
 
-            <div class = "col-md-9 animation-element slide-left">
-              <div class = "row">
-              <div class = "col-lg-4 col-sm-12 work">
-                <div id = "outer-box-hot" class = "outer-work">
-                <article class = "work-list" id = "hot-spot">
-                  <div class = "image-wrapper">
-                    <img class = "project-image" src = "public/images/hot-spot-stack.png">
-                    <div class = "overlay"></div>
-                  </div>
-                  <h5 class = "project-name">react-heat-wrapper</h5>
-                  <p>A React HOC to visualize user clicks</p>
-                  <a href = "https://github.com/daveyko/react-heat-wrapper" class = "work-link" >
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    <p class = "learn-more-words">Learn More</p>
+            <div class = "flex-content-projects animation-element slide-left">
+
+                <a href = "https://github.com/daveyko/react-heat-wrapper" target = "_blank" class = "project-wrapper">
+                  <i class="fas fa-fire"></i>
+                  <div class = "overlay-wrapper"></div>
+                  <span class = "overlay-text">react-heat-wrapper</span>
+                </a>
+
+                  <a href = "https://github.com/SequelSquad/SynQ" target = "_blank" class = "project-wrapper">
+                    <i class="fas fa-sync-alt"></i>
+                    <div class = "overlay-wrapper"></div>
+                    <span class = "overlay-text">synQ</span>
                   </a>
-                </article>
-                </div>
-            </div>
 
-              <div class = "col-lg-4 col-sm-12 work">
-                <div id = "outer-box-synq" class = "outer-work">
-                <article class = "work-list" id = "synq">
-                    <div class = "image-wrapper">
-                        <img class = "project-image" src = "public/images/synqTables.png">
-                        <div class = "overlay"></div>
-                    </div>
-                      <h5 class = "project-name">SynQ</h5>
-                      <p>An Electron Desktop app to generate sequelize scripts</p>
-                      <a href = "https://github.com/SequelSquad/SynQ" class = "work-link" >
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        <p class = "learn-more-words">Learn More</p>
-                      </a>
-                </article>
-                </div>
-              </div>
 
-          <div class = "col-lg-4 col-sm-12 work">
-              <div id = "outer-box-yarn" class = "outer-work">
-                <article class = "work-list" id = "yarn">
-                    <div class = "image-wrapper">
-                        <img class = "project-image" src = "public/images/concerts.png">
-                        <div class = "overlay"></div>
-                    </div>
-                      <h5 class = "project-name">NYConcerts</h5>
-                      <p>A React SPA showing concerts in NYC</p>
-                      <a href = "https://github.com/daveyko/concertsmap" class = "work-link" >
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        <p class = "learn-more-words">Learn More</p>
-                      </a>
-                </article>
-              </div>
-              </div>
+                  <a href = "https://github.com/daveyko/concertsmap" target = "_blank" class = "project-wrapper">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div class = "overlay-wrapper"></div>
+                    <span class = "overlay-text">NYConcerts</span>
+                  </a>
+
+
+
+                  <a href = "https://github.com/daveyko/schedule" target = "_blank" class = "project-wrapper">
+                    <i class="fas fa-list-ul"></i>
+                    <div class = "overlay-wrapper"></div>
+                    <span class = "overlay-text">Daily-Planner</span>
+                  </a>
+
+
+
+                  <a href = "https://github.com/daveyko/dancefloor" target = "_blank" class = "project-wrapper">
+                    <i class ="fas fa-music"></i>
+                    <div class = "overlay-wrapper"></div>
+                    <span class = "overlay-text">Giphy DanceFloor</span>
+                  </a>
+
+
+
+                  <a href = "https://github.com/daveyko" target = "_blank" class = "project-wrapper">
+                    <i class="fas fa-code-branch"></i>
+                    <div class = "overlay-wrapper"></div>
+                    <span class = "overlay-text">...contined on github</span>
+                  </a>
+
             </div>
           </div>
-
       </section>
 
       <section id = "contact" name = "contact">
         <div class = "inner">
               <ul class = "icons">
                 <li>
-                  <a href = "https://www.linkedin.com/in/david-park-ko"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  <a href = "https://www.linkedin.com/in/david-park-ko"> <i class="fab fa-linkedin" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                  <a href = "https://github.com/daveyko"><i class="fa fa-github" aria-hidden="true"></i></a>
+                  <a href = "https://github.com/daveyko"><i class="fab fa-github" aria-hidden="true"></i></a>
                 </li>
                 <li>
                   <a href = "mailto:dk577@cornell.edu"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
