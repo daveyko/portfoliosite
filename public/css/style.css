@@ -50,6 +50,12 @@ ul{
   background-color: white;
 }
 
+@keyframes bar-fill{
+  0% {
+    width: 0%;
+  }
+}
+
 .animation-element{
   opacity: 0;
 }
@@ -79,11 +85,10 @@ ul{
 }
 
 .progress-box{
-  margin: 40px 0px 40px 0px;
+  margin-top: 20px;
   position: relative;
+  width: 90%;
 }
-
-
 
 .progress-bar{
   height: 5px;
@@ -96,6 +101,8 @@ ul{
   height: 5px;
   opacity: 1;
   width: 100%;
+  z-index: 99;
+  position:relative;
 }
 
 .progress-bar.active.knowledgeable{
@@ -104,14 +111,6 @@ ul{
   opacity: 1;
   z-index: 99;
   position:relative;
-}
-
-.progress-bar.overlay{
-  position: absolute;
-  top: 46px;
-  z-index: 1;
-  height: 5px;
-  width: 100%;
 }
 
 .progress-bar.active.some-exp{
@@ -126,7 +125,7 @@ ul{
   font-size: 20px;
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1325px){
   .skills{
     font-size: 15px;
   }
@@ -135,7 +134,7 @@ ul{
   }
 }
 
-@media only screen and (max-width: 995px){
+@media only screen and (max-width: 1085px){
   .skills{
     font-size: 10px;
   }
@@ -253,6 +252,10 @@ i.circular-border{
   width:75px;
 }
 
+i.circular-border:hover{
+  background: rgba(255, 255, 255, .3);
+}
+
 #skills{
   text-align: center;
 }
@@ -317,9 +320,6 @@ img#htmlabouticon{
   align-items: center;
  }
 
-.work-text{
-  text-align: center;
-}
 
 .logo{
   text-align: center;
@@ -404,33 +404,11 @@ ul.ui-autocomplete li:hover {
 
 }
 
-.work-text{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width:100%;
-}
-/* .work-text h6:after{
-  content: "-";
-  font-weight:900;
-  color: white;
-  display: block;
-  text-shadow: 1px 0;
-  letter-spacing: 1px;
-} */
 
 .line{
   width: 25px;
   height: 1px;
   border-bottom: 5px solid white;
-}
-
-.work-text{
-  color: white;
-  z-index: 99999;
-  text-align: center;
-  font-size: 21px;
 }
 
 
@@ -591,6 +569,34 @@ ul.ui-autocomplete li:hover {
   display: none;
 }
 
+.overlay-wrapper{
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.overlay-text{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: white;
+  width: 100%;
+  display: none;
+}
+
+.project-wrapper:hover .overlay-wrapper{
+  opacity: 0.7;
+}
+
+.project-wrapper:hover .overlay-text{
+  display: inline-block;
+}
+
 #overlay-charts{
   position: absolute;
   height: 100%;
@@ -652,6 +658,7 @@ button#resume{
   padding: 5px;
   width: 150px;
   margin: 10px;
+  cursor: pointer;
 }
 
 #contact{
@@ -681,5 +688,121 @@ ul.icons{
   color: black;
 }
 
+
+.flex-wrapper{
+  display: flex;
+  flex-direction: row;
+  padding: 30px 0px;
+}
+
+.flex-text{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 33%;
+  align-items: center;
+}
+
+.flex-text h2{
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.flex-content-projects{
+  flex-grow: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 10px 65px 10px 65px;
+  width: 66%;
+}
+
+.flex-content-skills{
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 65px 10px 65px;
+  width: 66%;
+}
+
+.flex-content-skills > div{
+  padding: 20px;
+}
+
+.project-wrapper{
+  padding: 60px 10px 60px 10px;
+  width: 33%;
+  text-align: center;
+  height: 50%;
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.skills-header{
+  display:none;
+}
+
+@media only screen and (max-width: 570px){
+  .flex-wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-text{
+    width: 50%;
+    flex-grow: 1;
+  }
+  .flex-content-skills{
+    flex-grow: 1;
+  }
+  .progress-bar{
+    display: none;
+  }
+  .level{
+    display: none;
+  }
+  .skills-header{
+    display: block;
+  }
+  .flex-content-projects{
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-wrapper{
+    width: 100%;
+  }
+}
+
+.fas{
+  font-size: 55px;
+}
+
+.text-link{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+  color: black;
+  text-decoration: none;
+  width: 45%;
+  border: 2px solid black;
+}
+
+.text-link-text{
+  padding: 0px 5px 0px 5px;
+  display: inline-block;
+}
+
+.text-link-icon{
+  margin-top: 2px;
+  display: inline-block;
+}
+
+.text-link:link{
+  text-decoration: none;
+}
 
 
