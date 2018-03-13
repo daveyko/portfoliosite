@@ -582,7 +582,7 @@ ul.ui-autocomplete li:hover {
 
 .overlay-text{
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 0;
   color: white;
   width: 100%;
@@ -594,8 +594,19 @@ ul.ui-autocomplete li:hover {
 }
 
 .project-wrapper:hover .overlay-text{
-  display: inline-block;
+  display: block;
 }
+
+
+.project-wrapper:hover .work-link {
+  display: block;
+}
+
+.project-wrapper:hover .work-link-bottom {
+  display: block;
+}
+
+
 
 #overlay-charts{
   position: absolute;
@@ -663,7 +674,7 @@ button#resume{
 
 #contact{
   width: 100vw;
-  height: 20vh;
+  height: 10vh;
   background-color: white;
 }
 
@@ -673,10 +684,13 @@ button#resume{
   margin-right: 48px;
   padding-top: 48px;
   padding-bottom: 32px;
+  display: flex;
+  align-items: center;
 }
 
 ul.icons{
   list-style: none;
+  padding: 0;
 }
 
 .icons li{
@@ -707,7 +721,6 @@ ul.icons{
 .flex-text h2{
   text-align: center;
   padding: 10px;
-  padding-bottom: 0px;
 }
 
 .flex-content-projects{
@@ -787,8 +800,8 @@ ul.icons{
   padding: 5px;
   color: black;
   text-decoration: none;
-  width: 45%;
   border: 2px solid black;
+  width: 100px;
 }
 
 .text-link-text{
@@ -805,4 +818,49 @@ ul.icons{
   text-decoration: none;
 }
 
+.work-link{
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 50%;
+  display: none;
+  border: 2px solid white;
+  border-radius: 20px;
+  text-decoration: none;
+}
 
+.work-link-text{
+  color: white;
+}
+
+.work-link-bottom{
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  width: 50%;
+  display: none;
+  border: 2px solid white;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.work-link-overlay-wrapper{
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 20px;
+  transition: all 0.3s ease-out;
+}
+
+.work-link:hover .work-link-overlay-wrapper{
+  opacity: 0.2;
+}
+
+.work-link-bottom:hover .work-link-overlay-wrapper{
+  opacity: 0.2;
+}
